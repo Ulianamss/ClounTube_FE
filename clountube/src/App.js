@@ -1,15 +1,12 @@
 import logo from './logo.svg';
-import authorPic from './authorPic.jpg';
-import videoPreview from './videoPreview.jpg';
 import './App.css';
+import { Video } from './components/video';
+import { videoList } from './common/videoList';
 
 
-function App() {
-  // const videoInfo = [
-  //   {
-      
-  //   }
-  // ]
+function App() { 
+// export const App = (props) => {
+
   return (
     <div>
       <header className="App-header">
@@ -19,17 +16,13 @@ function App() {
           {/* какие-то иконки 3 штуки */}
           {/* иконка профиля */}
       </header>
-
-      <div className="videoBlock">
-        <img src={videoPreview} className="videoPreview" alt="videoPreview"/>
-        <img src={authorPic} className="authorPic" alt="authorPic"/>
-        <div className="infoBlock">          
-          <p className="videoName">video.name</p>
-          <p className="videoUsername">video.username</p>
-          <p className="videoViews">video.views</p>
-          <p className="videoTime">video.time</p>
-        </div>
-      </div>
+      {/* {
+        videoList.map( video =>
+          <Video                 
+            data = {video}>
+          </Video>
+        )
+      } */}
     </div>
   );
 }
