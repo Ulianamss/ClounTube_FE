@@ -1,28 +1,20 @@
-import logo from './logo.svg';
+import logo from './assets/logo.svg';
 import './App.css';
-import { Video } from './components/video';
-import { videoList } from './common/videoList';
+import { Video } from './components/video/video';
+import { videoList } from './mockData/videoList';
+import { VideoShow } from './components/videoShow/videoShow';
 
 
 function App() { 
 // export const App = (props) => {
-
   return (
     <div>
-      <header className="App-header">
-          {/* меню-бургер */}
-          <img src={logo} className="App-logo" alt="logo" />
-          {/* поиск */}
-          {/* какие-то иконки 3 штуки */}
-          {/* иконка профиля */}
-      </header>
-      {/* {
-        videoList.map( video =>
-          <Video                 
-            data = {video}>
-          </Video>
-        )
-      } */}
+      <img src={logo} className="App-logo" alt="logo" />
+
+      <div>
+        <VideoShow props={videoList}></VideoShow>
+      </div>
+
     </div>
   );
 }
