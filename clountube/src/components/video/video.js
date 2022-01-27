@@ -1,4 +1,3 @@
-// import {videoList} from '../mockData/videoList';
 import './video.css';
 
 
@@ -11,15 +10,15 @@ export const Video = (props)=>{
             <div>
                <div className="infoBlock">  
                     <div className='mainInfo'>
-                        <img className='authorPic' src={props.data.authorPic}/>
+                        <img className='authorPic' src={props.data.authorPicture}/>
                         <div className='videoAuthorAndName'>
-                            <p className="videoName">{props.data.videoName}</p>
-                            <p className="videoauthor">{props.data.authorName}</p>
+                            <span className="videoName">{props.data.videoName}</span>
+                            <span className="videoauthor">{props.data.authorName}</span>
                         </div>
                     </div>
                     <div className='viewsAndTime'>
-                        <p className="videoViews">{props.data.views}</p>
-                        <p className="videoTime">{props.data.uploadedAt}</p>
+                        <span className="videoViews">{props.data.views}</span>
+                        <span className="videoTime">{props.data.uploadedAt}</span>
                     </div>
                     </div>
                 </div>
