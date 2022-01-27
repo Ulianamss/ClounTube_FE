@@ -13,7 +13,7 @@ export const Header = (props)=>{
             <input className='searchBar' placeholder='search'></input>
             {/* какие-то иконки 3 штуки */}
             <div className='userPictureDiv'>
-                <img className='userPicture' src={userPicture}/>
+                <a href='/userid' ><img className='userPicture' src={userPicture}/></a>
             </div>       
         </div>
     )

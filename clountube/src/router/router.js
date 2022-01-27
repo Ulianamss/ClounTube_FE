@@ -6,9 +6,9 @@ import UserPage from '../pages/userPage/userPage.js'
 export const useRoutes = () =>{
   return(
     <Routes>
-      <Route path="/userid" component={UserPage}>
+      <Route path="/:userId" element={<UserPage/>}>
       </Route>
-      <Route path="/" component={MainPage}>
+      <Route path="/" element={<MainPage/>}>
       </Route>
       {/* <Redirect to="notFound"/> */}
     </Routes>
