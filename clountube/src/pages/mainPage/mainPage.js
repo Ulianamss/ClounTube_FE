@@ -3,8 +3,7 @@ import { videoList } from '../../mockData/videoList';
 import { VideoShow } from '../../components/videoShow/videoShow';
 import { Header } from '../../components/header/header';
 
-function App() { 
-// export const App = (props) => {
+function MainPage() { 
   return (
     <div>
       <div className='header'>
@@ -18,4 +17,4 @@ function App() {
   );
 }
 
-export default App;
+export default MainPage;
