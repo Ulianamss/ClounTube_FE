@@ -9,7 +9,7 @@ export const Header = (props)=>{
                 <div className='burgerMenu'></div>
                 <div className='burgerMenu'></div>
             </div>
-            <img src={logo} className="App-logo" alt="logo" />
+            <a href='/'><img src={logo} className="App-logo" alt="logo" /></a>
             <input className='searchBar' placeholder='search'></input>
             {/* какие-то иконки 3 штуки */}
             <div className='userPictureDiv'>
