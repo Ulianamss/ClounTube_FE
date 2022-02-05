@@ -5,8 +5,8 @@ import './videoShow.css';
 
 export const VideoShow = (props)=>{
     return(     
-        videoList.map( video =>
-          <Video                 
+        videoList.map( (video,  index) =>
+          <Video key = {index}                 
             data = {video}>
           </Video>
         )
