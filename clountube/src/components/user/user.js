@@ -4,7 +4,7 @@ import './user.css'
 
 export const User = (props)=>{
     return(
-        <div className='container'>
+        <div className='userContainer'>
             <div className='userPicturePageDiv'>
                 <img className='userPicturePage' src={props.props.userPicture}/>
             </div>
