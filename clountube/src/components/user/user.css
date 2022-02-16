@@ -6,19 +6,21 @@
 
 .userPicturePage{
     margin: 5px;
-    width: 500px;
-    height: 500px;
+    width: 100%;
+    /* width: 500px; */
+    /* height: 500px;  */
 }
 
 .userPicturePageDiv{
     margin: 5px;
-    width: 510px;
-    height: 510px;
+    width: 50%;
+    /* width: 510px; */
+    /* height: 510px;  */
     background-color:#32363f;
 }
 
 .userName{
-    font-size: 85px;
+    font-size: 340%;
 }
 
 .userNameDiv{
