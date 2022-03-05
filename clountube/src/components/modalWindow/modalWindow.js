@@ -10,10 +10,10 @@ const ModalWindow = props =>{
     // const deleteVideobutton = alert ("delete")//service.deleteVideo();
     // const updateVideobutton = alert ("update")//service.deleteVideo();
 
-    function deleteVideobutton(videoIndex){
-        service.deleteVideo(videoIndex);
+    function deleteVideobutton(videoIndexModal){
+        service.deleteVideo(videoIndexModal);
         console.log(videoList)
-        console.log(videoIndex)
+        console.log(videoIndexModal)
     }
 
     function updateVideobutton(){
@@ -24,7 +24,7 @@ const ModalWindow = props =>{
         <div className="modalWindow">
             <div className="modalButtonDiv">
                 <button onClick={updateVideobutton} className="modalButton">Update video</button>
-                <button onClick={deleteVideobutton} className="modalButton">Delete video</button>
+                <button onClick = {props.handleDelete} className="modalButton">Delete video</button>
             </div>
             <div className="modalCloseDiv">
                 <button onClick={props.closeButton} className="modalButtonClose">Close</button>

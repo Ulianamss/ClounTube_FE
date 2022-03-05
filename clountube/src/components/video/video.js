@@ -8,7 +8,7 @@ export const Video = (props)=>{
         <div className='videoBlock'>
             <div className='previewBlock'>
                 <button onClick={()=> setShow(true)} className='buttonVideoMenu'>...</button> 
-                <ModalWindow closeButton={()=> setShow(false)} show={show}/>
+                <ModalWindow closeButton={()=> setShow(false)} show={show} handleDelete={props.handleDelete}/> {/* добавить функции онклик из модалки*/} 
                 <img className='preview' src={props.data.preview}/>
             
             <div>
