@@ -10,16 +10,17 @@ const updateVideo = (oldName, newVideo) =>{
     return videoList;   
 }
 
-const deleteVideo = (name) =>{
+const deleteVideo = (videoId) =>{
     // найти по инексу и удалить
-    const videoIndex = videoList.findIndex(video => video.videoName===name);
-    videoList.splice(videoIndex,1);
+    const videoIndex = videoList.findIndex(video => video.id===videoId);
+    videoList.splice(videoIndex,1);    
+    console.log(videoId)
     return videoList
 }
 
-const createVideo = () =>{
-    // push
-    // return videoList
+const createVideo = (newVideo) =>{
+    videoList.push(newVideo);
+    return videoList
 }
 
 

@@ -9,6 +9,17 @@
     font-size: larger;
     color: white;      
 }
+
+.buttonVideoMenu{
+    position: absolute;
+    background: none;
+    border: none;
+    color:white;
+    font-size: 250%;
+    transform: rotate(90deg);
+
+}
+
 /*  
 @media screen and (min-width:2560px) {
     .videoBlock{

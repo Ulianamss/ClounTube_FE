@@ -18,5 +18,6 @@ export const VideoShow = (props)=>{
             data = {video}>
           </Video>
         )
+        
     )
 }

@@ -1,10 +1,14 @@
 import './video.css';
-
+import React, {useState} from 'react';
+import ModalWindow from '../modalWindow/modalWindow';
 
 export const Video = (props)=>{
+    const [show, setShow] = useState(false)
     return(
         <div className='videoBlock'>
             <div className='previewBlock'>
+                <button onClick={()=> setShow(true)} className='buttonVideoMenu'>...</button> 
+                <ModalWindow closeButton={()=> setShow(false)} show={show}/>
                 <img className='preview' src={props.data.preview}/>
             
             <div>
