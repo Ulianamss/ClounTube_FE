@@ -13,8 +13,8 @@ export const VideoShow = (props)=>{
   function indexFunction(a){
     service.deleteVideo(a)
     console.log(videoList)
-    setRecommendedVideos(service.deleteVideo(a)
-    )
+    const result = service.deleteVideo(a)
+    setRecommendedVideos([...result])
   }
 
 
