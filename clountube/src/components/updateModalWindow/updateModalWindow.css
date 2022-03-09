@@ -1,0 +1,24 @@
+.updateModalWindow{
+    width: 50%;
+    height: 75%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    background-color:#32363f;
+    /* position: absolute; */
+    display: flex;
+    flex-direction: column;
+}
+
+.updateModalCloseDiv{
+    background-color:#32363f;
+    border: 2px solid #282c34be;
+    /* border: none; */
+    color: white;
+    margin: 10px;
+    padding: 5px;
+}

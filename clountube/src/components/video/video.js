@@ -5,6 +5,8 @@ export const Video = (props)=>{
     return(
         <div className='videoBlock'>
             <div className='previewBlock'>
+                <button onClick={()=> setShow(true)} className='buttonVideoMenu'>...</button> 
+                <ModalWindow closeButton={()=> setShow(false)} show={show} handleDelete={props.handleDelete}/> 
                 <img className='preview' src={props.data.preview}/>
             
             <div>
