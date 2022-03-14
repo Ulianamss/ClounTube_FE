@@ -1,1 +1,6 @@
-/*  */
+.addButtonModalWindow{   
+    background-color:#32363f;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+}

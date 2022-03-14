@@ -1,5 +1,6 @@
 import logo from '../../assets/logo.svg';
 import './header.css'  
+import React, {useState} from 'react';
 import userPicture from '../../assets/authorPicture1.jpg' 
 // import Button from '../button/button'
 
@@ -15,11 +16,6 @@ export const Header = (props)=>{
             <input className='searchBar' placeholder='search'></input>
             {/* какие-то иконки 3 штуки */}
             <div className='userPictureDiv'>
-
-                <div className='addVideoButtonDIv'>
-                  {/* <Button props={"картинка плюсика"}></Button> */}
-                  <button className='addVideoButton'>+</button>
-                </div>
                 <a href='/userid' ><img className='userPicture' src={userPicture}/></a>
             </div>       
         </div>
