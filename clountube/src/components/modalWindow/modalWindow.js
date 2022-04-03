@@ -4,7 +4,9 @@ import UpdateVideoModal from "../updateVideoModal/updateVideoModal"
 import AddVideoModal from '../addVideoModal/addVideoModal'
 
 const ModalWindow = props =>{
-    const [show, setShow] = useState(false)
+    const [showAdd, setShowAdd] = useState(false);
+    const [showUpdate, setShowUpdate] = useState(false)
+
 
     if (!props.show){
         return null
@@ -14,16 +16,18 @@ const ModalWindow = props =>{
         <div className="modalWindow" onClick={props.closeButton}>
             <div  onClick={e => e.stopPropagation()}>
                 <div className="modalButtonDiv">
-                    <button onClick={()=> setShow(true)} className='modalButton'>Add video</button>
+                    <button onClick={()=> setShowAdd(true)} className='modalButton'>Add video</button>
                     <AddVideoModal 
-                        closeButton={()=> setShow(false)}
+                        closeButton={()=> setShowAdd(false)}
                         addVideoSubmitButton={props.addVideoSubmitButton}
-                        show={show}
+                        show={showAdd}
                     />
-                    <button onClick={()=> setShow(true)} className="modalButton">Update video</button>
+                    <button onClick={()=> setShowUpdate(true)} className="modalButton">Update video</button>
                     <UpdateVideoModal 
-                        closeButton={()=> setShow(false)} 
-                        show={show}
+                        closeButton={()=> setShowUpdate(false)} 
+                        updateVideoSubmitButton={props.updateVideoFunction}
+                        show={showUpdate}
+                        modalProps= {props.videoProps}
                     />
                     <button onClick = {props.handleDelete} className="modalButton">Delete video</button>
                 </div>

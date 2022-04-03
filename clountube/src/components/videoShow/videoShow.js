@@ -11,9 +11,17 @@ export const VideoShow = (props) => {
   function addVideoFunction(videoObj){
     console.log('submitted')
     const result = service.createVideo(videoObj)
-    console.log(result)
-    setRecommendedVideos([...result])
-  
+    console.log(videoObj)
+    setRecommendedVideos([...result])  
+    console.log(videoList)
+  }
+
+  function updateVideoFunction(videoId,newVideo){
+    console.log('updated')
+    const result = service.updateVideo(videoId,newVideo)
+    console.log(videoId)
+    console.log(newVideo)
+    setRecommendedVideos([...result])  
   }
 
   function indexFunctionDelete(videoIndex) {    
@@ -25,8 +33,9 @@ export const VideoShow = (props) => {
   return (
     recommendedVideos.map((video, index) =>
       <Video 
+        addVideoSubmitButton={addVideoFunction}
+        updateVideoSubmitButton={updateVideoFunction}
         handleDelete={() => indexFunctionDelete(video.id)}
-        addVideoSubmitButton={()=>addVideoFunction()}
         key={index}
         data={video}>
       </Video>

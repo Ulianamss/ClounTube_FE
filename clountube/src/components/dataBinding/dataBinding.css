@@ -1,0 +1,4 @@
+.inputAddDiv{
+    display: flex;
+    flex-direction: column;
+}

@@ -1,41 +1,43 @@
 import './updateVideoModal.css'
-import React from "react";
+import React, { useState } from "react";
+import UpdateDataBinding from '../updateDataBinding/updateDataBinding'
 
 
-const UpdateVideoModal = props =>{
+
+const UpdateVideoModal = props =>{    
+    const [dataAdding, setDataAdding] = useState({
+        id:"",
+        videoName: "",
+        authorName: "",
+        preview: require('../../assets/videoPreview1.jpg'),
+        authorPicture: require('../../assets/videoPreview1.jpg'),
+        views:"",
+        uploadedAt:""
+    })
+
+    function updateList(field, value){
+        setDataAdding({...dataAdding,[field]:value})
+        console.log(dataAdding)
+    }
+
     if (!props.show){
         return null
     }
 
-
-  // function indexFunctionUpdate(a) {    
-    //     const result = service.updateVideo(a)
-    //     console.log(result)
-    //     setRecommendedVideos([...result])
-    //     console.log(videoList)
-    //     console.log(result)
-    // }
-
-    //     recommendedVideos.map((video, index) =>
-    //       <Video 
-    //         handleUpdate={() => indexFunctionUpdate(video.id)}
-    //         key={index}
-    //         data={video}>
-    //       </Video>
-    //   )
-
-
     return(
         <div className='UpdateVideoModal'>
-            <div>:)))</div>
-
-            {/* a.target.value - достать значение которое ввели в  инпут */}
-             <div className="updateModalCloseDiv">
-                <button onClick={props.closeButton} className="modalButtonClose">Close</button>
+           <div className='addButtonModalWindow'>
+            <UpdateDataBinding 
+                onChange ={updateList}                    
+                updateProps= {props.modalProps}
+            />
+            <div className="updateModalCloseDiv">
+                <button onClick={props.closeButton} className="updateModalButtonClose">Close</button>
+                <button onClick={props.udateVideoSubmitButton} className="modalButtonSubmit">Update</button>
             </div>
         </div>
+        </div>
     )
-
 }
 
 export default UpdateVideoModal

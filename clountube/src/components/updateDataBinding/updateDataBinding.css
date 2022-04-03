@@ -1,18 +1,16 @@
-.addButtonModalWindow{   
+.inputUpdateDiv{
     background-color:#32363f;
     display: flex;
     flex-direction:column;
     position: fixed;
-    /* flex-direction: column;
-    position: absolute; */
-
 }
 
-.modalButtonClose{
+.updateModalButtonClose{
     background-color:#32363f;
     border: 2px solid #282c34be;
     /* border: none; */
     color: white;
     margin: 10px;
+    margin-top: 110px;
     padding: 5px;
 }

@@ -12,7 +12,9 @@ export const Video = (props)=>{
                     closeButton={()=> setShow(false)} 
                     handleDelete={props.handleDelete}
                     addVideoSubmitButton={props.addVideoSubmitButton}
+                    updateVideoSubmitButton={props.updateVideoFunction}
                     show={show}
+                    videoProps= {props.data}
                 />
                 <img className='preview' src={props.data.preview}/>
             

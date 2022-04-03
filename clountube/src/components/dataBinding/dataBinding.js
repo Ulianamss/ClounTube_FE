@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './dataBinding.css'
 
 
 class DataBinding extends Component {
@@ -48,8 +49,8 @@ handleChangeUploadedAt = event => {
 render() {
 
 	var videoObj = {
-		id : this.state.video.id,
-		videoName: this.state.video.videoName,
+		id : this.state.id,
+		videoName: this.state.videoName,
 		authorName: this.state.video.authorName,
 		preview: this.state.video.preview,
 		authorPicture: this.state.video.authorPicture,
@@ -64,6 +65,7 @@ render() {
 		<input 
 			placeholder="enter ID"
 			onChange={this.handleChangeId}>
+			{/*  onChange={(e)=> this.props.onChange}> */}
 		</input>
 
 		<input 
@@ -85,12 +87,12 @@ render() {
 			placeholder="Enter time"
 			onChange={this.handleChangeUploadedAt}>
 		</input>
-{/* 		
+ 		
         <p>ID: {this.state.id}</p>
 		<p>название: {this.state.videoName} </p>
         <p>автор: {this.state.authorName}</p>
 		<p>views: {this.state.views}</p>
-        <p>time: {this.state.uploadedAt}</p> */}
+        <p>time: {this.state.uploadedAt}</p> 
 
 	</div>
 	)

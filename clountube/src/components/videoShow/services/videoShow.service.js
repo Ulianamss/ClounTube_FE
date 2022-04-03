@@ -4,8 +4,8 @@ const getAllVideos = () =>{
     return videoList;
 }
 
-const updateVideo = (oldName, newVideo) =>{
-    const updatedVideoIndex = videoList.findIndex(video =>video.videoName===oldName);
+const updateVideo = (videoId, newVideo) =>{
+    const updatedVideoIndex = videoList.findIndex(video =>video.id===videoId);
     videoList[updatedVideoIndex]=newVideo; 
     return videoList;   
 }
@@ -13,7 +13,6 @@ const updateVideo = (oldName, newVideo) =>{
 const deleteVideo = (videoId) =>{
     const videoIndex = videoList.findIndex(video => video.id===videoId);
     videoList.splice(videoIndex,1);    
-    console.log(videoId)
     return videoList
 }
 
