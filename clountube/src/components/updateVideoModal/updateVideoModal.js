@@ -5,7 +5,7 @@ import UpdateDataBinding from '../updateDataBinding/updateDataBinding'
 
 
 const UpdateVideoModal = props =>{    
-    const [dataAdding, setDataAdding] = useState({
+    const [dataAddingUpdate, setDataAdding] = useState({
         id:"",
         videoName: "",
         authorName: "",
@@ -16,8 +16,8 @@ const UpdateVideoModal = props =>{
     })
 
     function updateList(field, value){
-        setDataAdding({...dataAdding,[field]:value})
-        console.log(dataAdding)
+        setDataAdding({...dataAddingUpdate,[field]:value})
+        // console.log(dataAddingUpdate)
     }
 
     if (!props.show){
@@ -26,16 +26,16 @@ const UpdateVideoModal = props =>{
 
     return(
         <div className='UpdateVideoModal'>
-           <div className='addButtonModalWindow'>
-            <UpdateDataBinding 
-                onChange ={updateList}                    
-                updateProps= {props.modalProps}
-            />
+            <div className='addButtonModalWindow'>
+                <UpdateDataBinding 
+                    onChange ={updateList}                    
+                    updateProps= {props.modalProps}
+                />
+            </div>
             <div className="updateModalCloseDiv">
                 <button onClick={props.closeButton} className="updateModalButtonClose">Close</button>
-                <button onClick={props.udateVideoSubmitButton} className="modalButtonSubmit">Update</button>
+                <button onClick={()=>props.updateVideoSubmitButton(dataAddingUpdate)} className="modalButtonSubmit">Update</button>
             </div>
-        </div>
         </div>
     )
 }

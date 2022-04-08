@@ -12,7 +12,7 @@ export const Video = (props)=>{
                     closeButton={()=> setShow(false)} 
                     handleDelete={props.handleDelete}
                     addVideoSubmitButton={props.addVideoSubmitButton}
-                    updateVideoSubmitButton={props.updateVideoFunction}
+                    updateVideoSubmitButton={props.updateVideoSubmitButton}
                     show={show}
                     videoProps= {props.data}
                 />

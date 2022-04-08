@@ -21,13 +21,10 @@ const createVideo = (newVideo) =>{
     return videoList
 }
 
-
 const service = {
     getAllVideos,
     updateVideo,
     deleteVideo,
     createVideo,
 }
-
-
 export default service

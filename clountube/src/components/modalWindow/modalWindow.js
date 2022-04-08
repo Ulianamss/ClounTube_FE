@@ -25,7 +25,7 @@ const ModalWindow = props =>{
                     <button onClick={()=> setShowUpdate(true)} className="modalButton">Update video</button>
                     <UpdateVideoModal 
                         closeButton={()=> setShowUpdate(false)} 
-                        updateVideoSubmitButton={props.updateVideoFunction}
+                        updateVideoSubmitButton={props.updateVideoSubmitButton}
                         show={showUpdate}
                         modalProps= {props.videoProps}
                     />

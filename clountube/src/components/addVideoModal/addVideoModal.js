@@ -15,7 +15,7 @@ const AddButtonModalWindow = props =>{
 
     function updateList(field, value){
         setDataAdding({...dataAdding,[field]:value})
-        console.log(dataAdding)
+        // console.log(dataAdding)
     }
 
     if (!props.show){
@@ -27,7 +27,7 @@ const AddButtonModalWindow = props =>{
             <DataBinding onChange ={updateList}/>
             <div className="updateModalCloseDiv">
                 <button onClick={props.closeButton} className="modalButtonClose">Close</button>
-                <button onClick={props.addVideoSubmitButton} className="modalButtonSubmit">Submit</button>
+                <button onClick={()=>props.addVideoSubmitButton(dataAdding)} className="modalButtonSubmit">Submit</button>
             </div>
         </div>
     )

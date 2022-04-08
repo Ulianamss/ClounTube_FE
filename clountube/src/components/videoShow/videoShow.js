@@ -11,9 +11,9 @@ export const VideoShow = (props) => {
   function addVideoFunction(videoObj){
     console.log('submitted')
     const result = service.createVideo(videoObj)
-    console.log(videoObj)
+    // console.log(videoObj)
     setRecommendedVideos([...result])  
-    console.log(videoList)
+    // console.log(videoList)
   }
 
   function updateVideoFunction(videoId,newVideo){
@@ -22,6 +22,7 @@ export const VideoShow = (props) => {
     console.log(videoId)
     console.log(newVideo)
     setRecommendedVideos([...result])  
+    console.log(videoList)
   }
 
   function indexFunctionDelete(videoIndex) {    
@@ -35,6 +36,7 @@ export const VideoShow = (props) => {
       <Video 
         addVideoSubmitButton={addVideoFunction}
         updateVideoSubmitButton={updateVideoFunction}
+        // updateVideoSubmitButton={()=>updateVideoFunction(video.id)}
         handleDelete={() => indexFunctionDelete(video.id)}
         key={index}
         data={video}>

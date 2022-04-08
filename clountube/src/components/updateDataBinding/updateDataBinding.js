@@ -6,7 +6,7 @@ import { Video } from '../video/video';
 class UpdateDataBinding extends Component {
 
 	constructor(props) {
-		console.log(props)
+		// console.log(props)
 		super();
 		this.state = { 
 			video:{
@@ -21,36 +21,34 @@ class UpdateDataBinding extends Component {
 		};
 	}
 
-// добавить value с текстом каждого поля, хз как достать эти данные из видеолиста
 
-	handleChangeId = event => {
-		this.setState({
-	    	id: event.target.value
-		})
-	}
-	handleChangeVideoName = event => {
-		this.setState({
-			videoName: event.target.value,
-		})
-	}
-	handleChangeAuthorName = event => {
-		this.setState({
-			authorName: event.target.value,
-		})
-	}
-	handleChangeViews = event => {
-		this.setState({
-			views: event.target.value,
-		})
-	}
-	handleChangeUploadedAt = event => {
-		this.setState({
-			uploadedAt: event.target.value,
-		})
-	}
+	// handleChangeId = event => {
+	// 	this.setState({
+	//     	id: event.target.value
+	// 	})
+	// }
+	// handleChangeVideoName = event => {
+	// 	this.setState({
+	// 		videoName: event.target.value,
+	// 	})
+	// }
+	// handleChangeAuthorName = event => {
+	// 	this.setState({
+	// 		authorName: event.target.value,
+	// 	})
+	// }
+	// handleChangeViews = event => {
+	// 	this.setState({
+	// 		views: event.target.value,
+	// 	})
+	// }
+	// handleChangeUploadedAt = event => {
+	// 	this.setState({
+	// 		uploadedAt: event.target.value,
+	// 	})
+	// }
 
-	render() {
-		
+	render() {		
 		var videoObj = {
 			id : this.state.video.id,//id должн браться из видео в видеолисте
 			videoName: this.state.video.videoName,
@@ -60,7 +58,7 @@ class UpdateDataBinding extends Component {
 			views: this.state.video.views,
 			time: this.state.video.uploadedAt
 		}
-		console.log(videoObj)
+		// console.log(videoObj)
 		return (
 			<div className='inputUpdateDiv'>			
 				<input 
