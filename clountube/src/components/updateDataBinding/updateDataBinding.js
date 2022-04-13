@@ -12,11 +12,11 @@ class UpdateDataBinding extends Component {
 			video:{
 				id:"",
 				videoName: "",
-	    		authorName: "",
+	    		authorName: this.authorName,
 				preview: require('../../assets/videoPreview1.jpg'),
 	        	authorPicture: require('../../assets/videoPreview1.jpg'),
-	        	views:"",
-				uploadedAt:""
+	        	views:this.views,
+				uploadedAt:this.uploadedAt
 			}
 		};
 	}

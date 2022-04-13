@@ -4,7 +4,7 @@ const getAllVideos = () =>{
     return videoList;
 }
 
-const updateVideo = (videoId, newVideo) =>{
+const updateVideo = (newVideo,videoId) =>{
     const updatedVideoIndex = videoList.findIndex(video =>video.id===videoId);
     videoList[updatedVideoIndex]=newVideo; 
     return videoList;   

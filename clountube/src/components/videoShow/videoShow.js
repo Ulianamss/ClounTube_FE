@@ -16,13 +16,13 @@ export const VideoShow = (props) => {
     // console.log(videoList)
   }
 
-  function updateVideoFunction(videoId,newVideo){
+  function updateVideoFunction(newVideo,videoId){
     console.log('updated')
-    const result = service.updateVideo(videoId,newVideo)
+    const result = service.updateVideo(newVideo,videoId,)
     console.log(videoId)
     console.log(newVideo)
     setRecommendedVideos([...result])  
-    console.log(videoList)
+    console.log(videoList)    
   }
 
   function indexFunctionDelete(videoIndex) {    
