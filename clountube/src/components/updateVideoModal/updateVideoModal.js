@@ -6,13 +6,14 @@ import UpdateDataBinding from '../updateDataBinding/updateDataBinding'
 
 const UpdateVideoModal = props =>{    
     const [dataAddingUpdate, setDataAddingUpdate] = useState({
-        id:"",
+        id:props.modalProps.id,
         videoName: "",
         authorName: props.modalProps.authorName,
         preview: require('../../assets/videoPreview1.jpg'),
         authorPicture: require('../../assets/videoPreview1.jpg'),
-        views:"",
-        uploadedAt:""
+        views:props.modalProps.views,
+        uploadedAt:props.modalProps.uploadedAt
+    })
     })
     console.log(props)
 
