@@ -23,13 +23,16 @@ const AddButtonModalWindow = props =>{
     }
 
     return(
-        <div className='addButtonModalWindow'>
-            <DataBinding onChange ={updateList}/>
-            <div className="updateModalCloseDiv">
+        <div className='modalAdd'>
+            <div className='addVideoModalWindow'>
+                <DataBinding onChange ={updateList}/>
+            </div>
+             <div className="divModalButtons">
                 <button onClick={props.closeButton} className="modalButtonClose">Close</button>
                 <button onClick={()=>props.addVideoSubmitButton(dataAdding)} className="modalButtonSubmit">Submit</button>
             </div>
         </div>
+        
     )
 }
 export default AddButtonModalWindow

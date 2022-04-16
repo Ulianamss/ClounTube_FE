@@ -1,11 +1,14 @@
-.addButtonModalWindow{   
+.modalAdd{
     background-color:#32363f;
     display: flex;
     flex-direction:column;
-    position: fixed;
-    /* flex-direction: column;
-    position: absolute; */
+    position: absolute;
+}
 
+.addVideoModalWindow{   
+    background-color:#32363f;
+    display: flex;
+    flex-direction:column;
 }
 
 .modalButtonClose{
