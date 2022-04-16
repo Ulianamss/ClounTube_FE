@@ -14,7 +14,6 @@ const UpdateVideoModal = props =>{
         views:props.modalProps.views,
         uploadedAt:props.modalProps.uploadedAt
     })
-    })
     console.log(props)
 
     function updateList(field, value){
