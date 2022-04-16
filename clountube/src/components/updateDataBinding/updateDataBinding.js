@@ -45,9 +45,9 @@ const UpdateDataBinding = props =>{
 		return (
 			<div className='inputUpdateDiv'>			
 				<input 
-					placeholder={this.props.updateProps.videoName}
+					placeholder={props.updateProps.videoName}
 					// value="videoName"
-					onChange={(e)=>this.props.onChange('videoName',e.target.value)}>
+					onChange={(e)=>props.onChange('videoName',e.target.value)}>
 				</input>					
 			</div>
 		)	
