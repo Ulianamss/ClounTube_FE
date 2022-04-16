@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import './updateDataBinding.css'
-import { Video } from '../video/video';
 
 
-class UpdateDataBinding extends Component {
+const UpdateDataBinding = props =>{   
 
 
 
@@ -33,7 +32,6 @@ class UpdateDataBinding extends Component {
 	// 	})
 	// }
 
-	render() {		
 		// var videoObj = {
 		// 	id : this.state.video.id,//id должн браться из видео в видеолисте
 		// 	videoName: this.state.video.videoName,
@@ -54,6 +52,5 @@ class UpdateDataBinding extends Component {
 			</div>
 		)	
 	}
-}
 
 export default UpdateDataBinding;	

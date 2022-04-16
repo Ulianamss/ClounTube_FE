@@ -92,13 +92,6 @@ render() {
 			// onChange={this.handleChangeUploadedAt}>
 			onChange={(e)=> this.props.onChange('time', e.target.value)}>
 		</input>
- 		
-        <p>ID: {this.state.id}</p>
-		<p>название: {this.state.video.videoName} </p>
-        <p>автор: {this.state.authorName}</p>
-		<p>views: {this.state.views}</p>
-        <p>time: {this.state.uploadedAt}</p> 
-
 	</div>
 	)
 }
