@@ -9,7 +9,6 @@
     background-color:#32363f;
     display: flex;
     flex-direction:column;
-    height: 70%;
 }
 
 .updateModalButtonClose{
