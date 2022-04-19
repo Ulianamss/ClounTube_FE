@@ -10,7 +10,6 @@ export const useRoutes = () =>{
       </Route>
       <Route path="/" element={<MainPage/>}>
       </Route>
-      {/* <Redirect to="notFound"/> */}
     </Routes>
   )
 }

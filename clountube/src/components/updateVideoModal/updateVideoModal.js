@@ -14,11 +14,9 @@ const UpdateVideoModal = props =>{
         views:props.modalProps.views,
         uploadedAt:props.modalProps.uploadedAt
     })
-    console.log(props)
 
     function updateList(field, value){
         setDataAddingUpdate({...dataAddingUpdate,[field]:value})
-        console.log(dataAddingUpdate)
     }
 
     if (!props.show){

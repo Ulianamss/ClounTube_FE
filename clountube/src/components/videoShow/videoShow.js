@@ -2,7 +2,6 @@ import './videoShow.css';
 import { Video } from '../video/video';
 import service from './services/videoShow.service';
 import {  useState , useEffect } from 'react';
-import { videoList } from '../../mockData/videoList';
 
 
 export const VideoShow = (props) => {
@@ -11,23 +10,16 @@ export const VideoShow = (props) => {
   function addVideoFunction(videoObj){
     console.log('submitted')
     const result = service.createVideo(videoObj)
-    // console.log(videoObj)
     setRecommendedVideos([...result])  
-    // console.log(videoList)
   }
 
   function updateVideoFunction(newVideo,videoId){
-    console.log('updated')
-    const result = service.updateVideo(newVideo,videoId,)
-    console.log(videoId)
-    console.log(newVideo)
+    const result = service.updateVideo(newVideo,videoId)
     setRecommendedVideos([...result])  
-    console.log(videoList)    
   }
 
   function indexFunctionDelete(videoIndex) {    
     const result = service.deleteVideo(videoIndex)
-    console.log(result)
     setRecommendedVideos([...result])
   }
 
@@ -36,7 +28,6 @@ export const VideoShow = (props) => {
       <Video 
         addVideoSubmitButton={addVideoFunction}
         updateVideoSubmitButton={updateVideoFunction}
-        // updateVideoSubmitButton={()=>updateVideoFunction(video.id)}
         handleDelete={() => indexFunctionDelete(video.id)}
         key={index}
         data={video}>

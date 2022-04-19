@@ -15,7 +15,6 @@ const AddButtonModalWindow = props =>{
 
     function updateList(field, value){
         setDataAdding({...dataAdding,[field]:value})
-        // console.log(dataAdding)
     }
 
     if (!props.show){
@@ -31,8 +30,7 @@ const AddButtonModalWindow = props =>{
                 <button onClick={props.closeButton} className="modalButtonClose">Close</button>
                 <button onClick={()=>props.addVideoSubmitButton(dataAdding)} className="modalButtonSubmit">Submit</button>
             </div>
-        </div>
-        
+        </div>        
     )
 }
 export default AddButtonModalWindow
